@@ -22,10 +22,10 @@ for line in sys.stdin:
         urls[nrow_url][3]=round(urls[nrow_url][1]/urls[nrow_url][2],3)
     else:    
         urls.append([modified_path, time,1,time])
-
+        
 sorted_urls=sorted(urls, key=itemgetter(3), reverse=True)
-print (sorted_urls)
+print ('URL','\t','SUM','\t','COUNT','\t','AVG')
 for rows in sorted_urls:
     for cells in rows:    
-        print (cells,'\t\t',end='')
+        print (cells,'\t',end='')
     print ('')
